@@ -23,10 +23,10 @@ class Palette extends Component {
     const colorBoxes = colors[level].map(color => (
       <ColorBox
         background={color[format]}
-        name={color.name}
+        name={color.name.slice(0, -1)}
         key={color.id}
         moreUrl={`/palette/${id}/${color.id}`}
-        showLink={true}
+        showingFullPalette={true}
       />
     ));
     return (
